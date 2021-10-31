@@ -1,9 +1,7 @@
 package com.example.scanner.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.scanner.R
 import com.example.scanner.databinding.FragmentViewPagerBinding

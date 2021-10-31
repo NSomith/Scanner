@@ -1,4 +1,4 @@
-package com.drbrosdev.studytextscan.epoxy
+package com.example.scanner.epoxy
 
 import android.view.View
 import androidx.annotation.LayoutRes

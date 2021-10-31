@@ -10,6 +10,7 @@ class ScanRepo(val db:AppDb) {
     private val dao = db.scanDao
     suspend fun insertScan(scan: Scan) = dao.insertScan(scan)
     suspend fun deleteScan(scan: Scan) = dao.deleteScan(scan)
+    suspend fun getAllScan() = dao.getAllScans()
     suspend fun updateScan(scan: Scan) = dao.updateScan(scan)
 
     fun getScanById(id:Int) = flow<Resource<Scan>> {

@@ -8,16 +8,16 @@ import kotlinx.coroutines.flow.Flow
 interface ScanDao {
 
     @Query("select * from scan order by date_created desc")
-    fun getAllScans():Flow<List<Scan>>
+    suspend fun getAllScans():Flow<List<Scan>>
     @Insert
-    fun insertScan(scan: Scan):Long
+    suspend fun insertScan(scan: Scan):Long
 
     @Delete
-    fun deleteScan(scan: Scan)
+    suspend fun deleteScan(scan: Scan)
     @Update
-    fun updateScan(scan: Scan)
+    suspend fun updateScan(scan: Scan)
 
     @Query("select * from scan where scan_id=:id")
-    fun getScanById(id:Int):Scan
+    suspend fun getScanById(id:Int):Scan
 
 }
