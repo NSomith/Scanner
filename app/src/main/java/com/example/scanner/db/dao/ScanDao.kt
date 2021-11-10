@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 interface ScanDao {
 
     @Query("select * from scan order by date_created desc")
-    suspend fun getAllScans():Flow<List<Scan>>
+    fun getAllScans():Flow<List<Scan>>
     @Insert
     suspend fun insertScan(scan: Scan):Long
 
